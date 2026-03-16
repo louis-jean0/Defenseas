@@ -1,44 +1,224 @@
-# README du jeu Defenseas
+<div align="center">
+   <img src="https://img.shields.io/badge/Godot-4.3-blue?logo=godotengine&logoColor=white" alt="Godot"/>
+   <img src="https://img.shields.io/badge/GDScript-blue?logo=godotengine&logoColor=white" alt="GDScript"/>
+   <img src="https://img.shields.io/badge/License-MIT-green" alt="License MIT"/>
+</div>
 
-## Introduction
-*Defenseas* est un jeu développé avec **Godot**, où l'objectif est de lutter contre la pollution en empêchant les déchets d'atteindre l'océan. Vous disposez de plusieurs outils pour relever ce défi.
+# Defenseas
 
-## Comment utiliser l'application
+<div align="center">
+   <img src="defenseas/miscellaneous/logoDefenseasFinal.png" width="300"/>
+</div>
 
-Après avoir lancé l'exécutable Windows ou Linux, vous arrivez sur le **menu principal**. De là, vous pouvez :
+_Also available in [French](#-version-française)._
 
-1. Lancer une partie.
-2. Découvrir les commandes (similaire à ce README).
-2. Ouvrir les options (pour régler le volume).
-3. Fermer l'application.
+**Defenseas** is a serious game developed with **Godot** as part of the *Jeux Sérieux*
+course of the IMAGINE Computer Graphics Master's program at the University of
+Montpellier. The goal: prevent waste from reaching the ocean by combining a
+**Tower Defense** mode with a **Puzzle minigame**, all while raising awareness
+about marine pollution.
 
-### Interface de jeu
+> 🇫🇷 Please note that the game is entirely in French.
 
-Lorsque vous lancez une partie, voici comment l'interface est organisée :
+## Key features
 
-- **Panneau d'information** : situé à gauche, il vous fournit des informations essentielles sur votre progression.
-  
-- **Informations financières** : sur la droite, en haut, vous trouverez votre montant d'argent et la quantité de plastique récolté, ainsi qu'un bouton pour recycler le plastique et le convertir en fonds.
+- **Tower Defense mode:** place structures on a river map to intercept waste
+  before it reaches the ocean.
+- **Puzzle game mode:** switch to a mini-game where you align and recycle waste
+  that already made it to the sea.
+- **Economy system:** sell collected plastic to fund new structures, balance
+  your income against your cleanup efficiency.
+- **Wave-based progression:** waves get harder with faster and more waste.
+- **Awareness feedback:** win or lose, the game always shows you a real
+  environmental statistic.
 
-- **Objets disponibles** : en dessous des informations financières se trouvent les 4 objets que vous pouvez utiliser :
-  - **Tourelles** : ces structures ne peuvent être placées que sur la terre et tirent sur les déchets pour les téléporter vers les usines de recyclage.
-  - **Turbines** : placées dans l'eau, elles améliorent les tourelles à portée (vitesse et dégâts).
-    - **Turbines bleues** : augmentent les dégâts des tourelles qui les aperçoivent.
-    - **Turbines vertes** : augmentent la cadence de tir des tourelles qui les aperçoivent.
-  - **Filets** : placés dans l'eau, ils peuvent récolter jusqu'à 10 déchets avant d'être relevés.
+## Gameplay
 
-Lorsqu'un objet est sélectionné, les cases où il peut être placé sont surlignées en vert.
+### Tower Defense
 
-- **Carte de jeu** : au centre, vous trouverez la carte où l'action se déroule. Les déchets sont entraînés par la rivière ; il vous faudra utiliser judicieusement vos ressources pour récupérer le maximum de plastique.
+Manage your economy and place structures on the map to intercept waste flowing
+down the river:
+
+| Structure | Placement | Effect |
+|---|---|---|
+| **Turret** | Land | Shoots waste and teleports it to recycling factories |
+| **Blue Turbine** | Water | Increases damage of nearby turrets |
+| **Green Turbine** | Water | Increases fire rate of nearby turrets |
+| **Net** | Water | Passively collects up to 10 waste items |
+
+Sell your collected plastic for bonus rewards — the more you sell at once, the
+better the payout:
+
+| Quantity | Bonus |
+|---|---|
+| 100+ | +10% |
+| 200+ | +20% |
+| 300+ | +30% |
+| 400+ | +40% |
+
+> ⚠️ Let 35 waste items through and it's game over.
 
 ### Puzzle game
 
-Le puzzle-game se déroule en parallèle. Pour y accéder, appuyez sur la touche **Entrée**. Vous devez aligner au minimum trois déchets identiques, soit verticalement, soit horizontalement, pour les éliminer. Pour vous déplacer, utilisez les flèches gauche et droite, la flèche du bas pour descendre la pince, et la touche **Espace** pour attraper un déchet.
+Press **Enter** to switch to the puzzle mode. Align at least 3 identical waste
+items horizontally or vertically to eliminate them. Use the crane mounted on the boat to grab and move items.
 
-### Barre de vie
+## Screenshots
 
-La barre de vie, située tout en bas de l'écran, indique votre état par rapport à la défaite. Si vous laissez passer trop de déchets (35), vous perdrez. Si vous survivez à toutes les vagues, vous remportez la partie !
+<div align="center">
+   <img src="defenseas/miscellaneous/screen_jeu.png" height="300" width="400"/>
+   <img src="defenseas/miscellaneous/screen_puzzle.png" height="300" width="400"/>
+</div>
 
-## Conclusion
+## Controls
 
-Ce jeu a été conçu pour être à la fois ludique et éducatif, sensibilisant les joueurs aux enjeux de la pollution marine. Amusez-vous à lutter contre les déchets et à faire la différence !
+### Tower Defense
+- **Left click**: select and place a structure
+- **Right click**: cancel selection
+- **Enter**: switch to puzzle game mode
+
+### Puzzle minigame
+- **Left / Right arrows**: move the boat
+- **Down arrow**: lower the crane
+- **Space**: grab / release a waste item
+- **Enter**: return to tower defense mode
+
+## How to run
+
+Clone the repository :
+
+```bash
+git clone git@github.com:louis-jean0/Defenseas.git
+```
+
+and execute the corresponding file depending on your operating system : 
+
+`ExecutableWindows/defenseas.exe` for Windows,
+
+`ExecutableLinux/defenseas.sh` for Linux. **N.B** : you may need to give execution permissions to the file via chmod. 
+
+Alternatively, after cloning the repository, open the project in **Godot 4.3**.
+Then open `project.godot` in the Godot editor and press **F5** to run.
+
+## License
+
+This project is licensed under the MIT License — see the [LICENSE](LICENSE)
+file for details.
+
+## Authors
+
+Brian Delvigne, Louis Jean, Loïc Kerbaul, Benjamin Serva  
+*Master 2 IMAGINE — Université de Montpellier, 2024*
+
+---
+
+<details>
+<summary>🇫🇷 Version française</summary>
+
+# Defenseas
+
+<div align="center">
+   <img src="defenseas/miscellaneous/logoDefenseasFinal.png" width="300"/>
+</div>
+
+**Defenseas** est un jeu sérieux développé avec **Godot** dans le cadre du cours
+*Jeux Sérieux* du Master Informatique parcours IMAGINE de l'Université de
+Montpellier. Objectif : empêcher les déchets d'atteindre l'océan en combinant
+un mode **Tower Defense** et un **Puzzle minijeu**, tout en sensibilisant aux
+enjeux de la pollution marine.
+
+> 🇫🇷 Le jeu est entièrement en français.
+
+## Fonctionnalités clés
+
+- **Mode Tower Defense :** placez des structures sur une carte fluviale pour
+  intercepter les déchets avant qu'ils n'atteignent l'océan.
+- **Mode Puzzle minijeu :** switchez vers un mini-jeu où vous alignez et recyclez
+  les déchets déjà tombés à la mer.
+- **Système économique :** revendez le plastique collecté pour financer de
+  nouvelles structures, trouvez le bon équilibre entre revenus et nettoyage.
+- **Progression par vagues :** les vagues deviennent progressivement plus
+  difficiles avec des déchets plus rapides et plus nombreux.
+- **Feedback de sensibilisation :** victoire ou défaite, le jeu vous affiche
+  toujours une vraie statistique environnementale.
+
+## Gameplay
+
+### Tower Defense
+
+Gérez votre économie et placez des structures sur la carte pour intercepter les
+déchets qui descendent la rivière :
+
+| Structure | Placement | Effet |
+|---|---|---|
+| **Tourelle** | Terre | Tire sur les déchets et les téléporte vers les usines |
+| **Turbine bleue** | Eau | Augmente les dégâts des tourelles à portée |
+| **Turbine verte** | Eau | Augmente la cadence de tir des tourelles à portée |
+| **Filet** | Eau | Récolte passivement jusqu'à 10 déchets |
+
+Revendez votre plastique pour des bonus — plus vous vendez d'un coup, plus le
+gain est élevé :
+
+| Quantité | Bonus |
+|---|---|
+| 100+ | +10% |
+| 200+ | +20% |
+| 300+ | +30% |
+| 400+ | +40% |
+
+> ⚠️ Laissez passer 35 déchets et la partie est perdue.
+
+### Puzzle minijeu
+
+Appuyez sur **Entrée** pour passer en mode puzzle. Alignez au minimum 3 déchets
+identiques horizontalement ou verticalement pour les éliminer. Utilisez la grue montée sur le bateau pour attraper et déplacer les déchets.
+
+## Captures d'écran
+
+<div align="center">
+   <img src="defenseas/miscellaneous/screen_jeu.png" height="300" width="400"/>
+   <img src="defenseas/miscellaneous/screen_puzzle.png" height="300" width="400"/>
+</div>
+
+## Contrôles
+
+### Tower Defense
+- **Clic gauche** : sélectionner et placer une structure
+- **Clic droit** : annuler la sélection
+- **Entrée** : passer en mode puzzle
+
+### Puzzle minijeu
+- **Flèche gauche / droite** : déplacer le bateau
+- **Flèche bas** : descendre la grue
+- **Espace** : attraper / relâcher un déchet
+- **Entrée** : revenir au mode Tower Defense
+
+## Lancer le jeu
+
+Clonez le dépôt :
+
+```bash
+git clone git@github.com:louis-jean0/Defenseas.git
+```
+
+puis lancez l'exécutable correspondant à votre système :
+
+`ExecutableWindows/defenseas.exe` pour Windows,
+
+`ExecutableLinux/defenseas.sh` pour Linux. **N.B** : vous devrez peut-être
+attribuer les droits d'exécution via chmod.
+
+Alternativement, après avoir cloné le dépôt, ouvrez le projet dans **Godot 4.3**,
+puis ouvrez `project.godot` dans l'éditeur et appuyez sur **F5**.
+
+## Licence
+
+Ce projet est sous licence MIT — consultez le fichier [LICENSE](LICENSE) pour
+plus de détails.
+
+## Auteurs
+
+Brian Delvigne, Louis Jean, Loïc Kerbaul, Benjamin Serva  
+*Master 2 IMAGINE — Université de Montpellier, 2024*
+
+</details>
