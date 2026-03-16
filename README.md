@@ -67,7 +67,7 @@ items horizontally or vertically to eliminate them. Use the crane mounted on the
 
 <div align="center">
    <img src="defenseas/miscellaneous/screen_jeu.png" height="300" width="400"/>
-   <img src="defenseas/miscellaneous/screen_puzzle.png" height="275" width="400"/>
+   <img src="defenseas/miscellaneous/screen_puzzle.png" height="272" width="400"/>
 </div>
 
 ## Controls
@@ -177,7 +177,7 @@ identiques horizontalement ou verticalement pour les éliminer. Utilisez la grue
 
 <div align="center">
    <img src="defenseas/miscellaneous/screen_jeu.png" height="300" width="400"/>
-   <img src="defenseas/miscellaneous/screen_puzzle.png" height="275" width="400"/>
+   <img src="defenseas/miscellaneous/screen_puzzle.png" height="272" width="400"/>
 </div>
 
 ## Contrôles
