@@ -67,7 +67,7 @@ items horizontally or vertically to eliminate them. Use the crane mounted on the
 
 <div align="center">
    <img src="defenseas/miscellaneous/screen_jeu.png" height="300" width="400"/>
-   <img src="defenseas/miscellaneous/screen_puzzle.png" height="280" width="400"/>
+   <img src="defenseas/miscellaneous/screen_puzzle.png" height="270" width="400"/>
 </div>
 
 ## Controls
